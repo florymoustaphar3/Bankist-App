@@ -1,7 +1,4 @@
 'use strict';
-
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
 // BANKIST APP
 
 // Data
@@ -70,6 +67,15 @@ const currencies = new Map([
   ['EUR', 'Euro'],
   ['GBP', 'Pound sterling'],
 ]);
+//Date
+//Dates
+const date = new Date();
+const day = `${date.getDate()}`.padStart(2, 0);
+const month = `${date.getMonth() + 1}`.padStart(2, 0);
+const year = date.getFullYear();
+const hour = date.getHours();
+const min = date.getMinutes();
+labelDate.textContent = `${year}/${month}/${day}, ${hour}:${min}`;
 
 //Calculate account Balance
 const calDisplayBalance = function (acc) {
